@@ -19,6 +19,11 @@ public class InstructorController {
 	@Autowired
 	private InstructorService instructorService;
 
+	@RequestMapping("/hello")
+	public String helloMsg() {
+		return "Hi, Everyone";
+		}
+	
 	@RequestMapping("/instructors")
 	public List<Instructor> getAllInstructors() {
 		return instructorService.getAllInstructorsService();
